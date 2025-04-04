@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Investor Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="investor-dashboard.html">Dashboard</a></li>
+                <li><a href="business-dashboard.html">Business Ideas</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="investment-proposals">
+            <h2>Investment Proposals</h2>
+            <button id="post-proposal">Post Investment Proposal</button>
+            <div id="proposals-list"></div>
+        </section>
+        <section id="business-ideas">
+            <h2>Business Ideas</h2>
+            <div id="ideas-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Bridge Between Investor And Business People</p>
+    </footer>
+    <script>
+        document.getElementById('logout').addEventListener('click', function() {
+            // Logout functionality
+        });
+
+        document.getElementById('post-proposal').addEventListener('click', function() {
+            // Functionality to post a new investment proposal
+        });
+    </script>
+</body>
+</html>

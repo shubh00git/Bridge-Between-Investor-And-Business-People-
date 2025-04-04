@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Business Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="investor-dashboard.html">Investor Dashboard</a></li>
+                <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="post-business-idea">
+            <h2>Post a Business Idea</h2>
+            <form id="business-idea-form">
+                <input type="text" id="idea-title" placeholder="Title" required>
+                <textarea id="idea-description" placeholder="Description" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="manage-business-ideas">
+            <h2>Your Business Ideas</h2>
+            <ul id="business-ideas-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Bridge Between Investor And Business People</p>
+    </footer>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

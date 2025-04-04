@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bridge Between Investor And Business People</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="investor-dashboard.html">Investor Dashboard</a></li>
+                <li><a href="business-dashboard.html">Business Dashboard</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="loan-offers">
+            <h2>Manage Loan Offers</h2>
+            <button id="add-loan-offer">Add Loan Offer</button>
+            <div id="loan-offer-list"></div>
+        </section>
+        <section id="guidance">
+            <h2>Provide Guidance</h2>
+            <button id="add-guidance">Add Guidance</button>
+            <div id="guidance-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Bridge Between Investor And Business People</p>
+    </footer>
+    <script>
+        document.getElementById('logout').addEventListener('click', function() {
+            firebase.auth().signOut().then(() => {
+                window.location.href = 'index.html';
+            }).catch((error) => {
+                console.error('Logout Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
